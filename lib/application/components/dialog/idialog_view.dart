@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_boilerplate/application/components/image/iimage.dart';
-import 'package:mobile_boilerplate/application/constant/iconstant.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
+import 'package:todolist/application/components/image/iimage.dart';
+import 'package:todolist/application/constant/iconstant.dart';
+import 'package:todolist/application/helper/size_config.dart';
 
 class IDialogView {
   static Future dialogError(
@@ -152,7 +152,7 @@ class IDialogView {
                   TextButton(
                     onPressed: onPressedOk ?? () {},
                     child: const Text(
-                      'Kembali ke Beranda',
+                      'OK',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

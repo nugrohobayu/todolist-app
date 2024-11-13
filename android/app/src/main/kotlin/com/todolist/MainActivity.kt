@@ -1,4 +1,4 @@
-package com.example.mobile_boilerplate
+package com.todolist
 
 import io.flutter.embedding.android.FlutterActivity
 

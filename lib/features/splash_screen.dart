@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mobile_boilerplate/application/components/image/iimage.dart';
-import 'package:mobile_boilerplate/application/constant/iconstant.dart';
-import 'package:mobile_boilerplate/features/auth/login/views/login_view.dart';
+import 'package:todolist/application/components/image/iimage.dart';
+import 'package:todolist/application/constant/iconstant.dart';
+import 'package:todolist/features/auth/register/views/registration_view.dart';
 
 class SplashScreen extends StatelessWidget {
   static const routeName = '/SplashScreen';
@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        context.push(LoginView.routeName);
+        context.push(RegistrationView.routeName);
       },
     );
     return const Scaffold(

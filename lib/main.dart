@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:mobile_boilerplate/application/constant/color_palette.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
-import 'package:mobile_boilerplate/routes/route_list.dart';
-import 'package:mobile_boilerplate/routes/route_observer.dart';
+import 'package:todolist/application/constant/color_palette.dart';
+import 'package:todolist/application/helper/size_config.dart';
+import 'package:todolist/routes/route_list.dart';
+import 'package:todolist/routes/route_observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig.initOnStartUp(context);
-    
+
     return MaterialApp.router(
-      title: 'Flutter Boilerplate',
+      title: 'Todo List App',
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
       theme: ThemeData(

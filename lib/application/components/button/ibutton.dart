@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_boilerplate/application/constant/color_palette.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
+import 'package:todolist/application/constant/color_palette.dart';
+import 'package:todolist/application/helper/size_config.dart';
 
 class IButton extends StatelessWidget {
   final String name;

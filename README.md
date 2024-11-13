@@ -1,5 +1,3 @@
-# mobile_boilerplate
-
 A new Flutter project.
 
 ## Getting Started

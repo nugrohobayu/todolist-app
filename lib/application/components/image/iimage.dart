@@ -4,8 +4,8 @@ import 'dart:typed_data';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_boilerplate/application/constant/color_palette.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
+import 'package:todolist/application/constant/color_palette.dart';
+import 'package:todolist/application/helper/size_config.dart';
 
 class IImage extends StatelessWidget {
   final dynamic image;

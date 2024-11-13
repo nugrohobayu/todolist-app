@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_boilerplate/application/constant/iconstant.dart';
-import 'package:mobile_boilerplate/application/helper/shared_pref.dart';
-import 'package:mobile_boilerplate/data/repositories/AuthServices.dart';
-import 'package:mobile_boilerplate/features/auth/login/models/request_login.dart';
-import 'package:mobile_boilerplate/features/auth/login/models/response_login.dart';
+import 'package:todolist/application/constant/iconstant.dart';
+import 'package:todolist/application/helper/shared_pref.dart';
+import 'package:todolist/data/repositories/auth_services.dart';
+import 'package:todolist/features/auth/login/models/request_login.dart';
+import 'package:todolist/features/auth/login/models/response_login.dart';
 
 class LoginViewModel extends ChangeNotifier {
   final service = AuthServices();

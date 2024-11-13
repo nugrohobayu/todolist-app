@@ -7,15 +7,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
-import 'package:mobile_boilerplate/application/constant/color_palette.dart';
-import 'package:mobile_boilerplate/application/constant/iconstant.dart';
-import 'package:mobile_boilerplate/application/helper/shared_pref.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
-import 'package:mobile_boilerplate/features/auth/login/views/login_view.dart';
+import 'package:todolist/application/constant/color_palette.dart';
+import 'package:todolist/application/constant/iconstant.dart';
+import 'package:todolist/application/helper/shared_pref.dart';
+import 'package:todolist/application/helper/size_config.dart';
+import 'package:todolist/features/auth/login/views/login_view.dart';
 
 class BaseApi {
-  final String _schema = "https";
-  final String _host = "dummyjson.com";
+  final String _schema = "http";
+  final String _host = "94.74.86.174";
   final String _post = "post";
   final String _get = "get";
   final String _put = "put";
@@ -151,6 +151,7 @@ class BaseApi {
     var url = Uri(
       scheme: _schema,
       host: _host,
+      port: 8080,
       path: path,
       queryParameters: queryParam,
     );

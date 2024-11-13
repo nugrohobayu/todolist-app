@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
+import 'package:todolist/application/helper/size_config.dart';
 
 class ITextForm extends StatelessWidget {
   final String? label;

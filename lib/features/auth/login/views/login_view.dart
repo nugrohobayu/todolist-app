@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_boilerplate/application/components/button/ibutton.dart';
-import 'package:mobile_boilerplate/application/components/dialog/idialog_view.dart';
-import 'package:mobile_boilerplate/application/components/image/iimage.dart';
-import 'package:mobile_boilerplate/application/components/text_form/itext_form.dart';
-import 'package:mobile_boilerplate/application/constant/color_palette.dart';
-import 'package:mobile_boilerplate/application/constant/iconstant.dart';
-import 'package:mobile_boilerplate/application/helper/size_config.dart';
-import 'package:mobile_boilerplate/features/auth/login/models/request_login.dart';
-import 'package:mobile_boilerplate/features/auth/login/viewmodel/login_viewmodel.dart';
+import 'package:todolist/application/components/button/ibutton.dart';
+import 'package:todolist/application/components/dialog/idialog_view.dart';
+import 'package:todolist/application/components/image/iimage.dart';
+import 'package:todolist/application/components/text_form/itext_form.dart';
+import 'package:todolist/application/constant/color_palette.dart';
+import 'package:todolist/application/constant/iconstant.dart';
+import 'package:todolist/application/helper/size_config.dart';
+import 'package:todolist/features/auth/login/models/request_login.dart';
+import 'package:todolist/features/auth/login/viewmodel/login_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class LoginView extends StatelessWidget {
