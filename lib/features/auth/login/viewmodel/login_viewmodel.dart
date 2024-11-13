@@ -11,7 +11,7 @@ class LoginViewModel extends ChangeNotifier {
   Future<ResponseLogin?> login(BuildContext context, RequestLogin payload) async {
     final result = await service.login(context, payload: payload);
     if (result != null) {
-      await SharedPref.setValue(IConstant.localStorageToken, result.accessToken);
+      await SharedPref.setValue(IConstant.localStorageToken, result.token);
       return result;
     }
     return null;

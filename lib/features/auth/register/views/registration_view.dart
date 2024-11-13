@@ -104,6 +104,23 @@ class RegistrationView extends StatelessWidget {
                     },
                   );
                 }),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text('sudah punya akun? login '),
+                    GestureDetector(
+                        onTap: () {
+                          context.push(LoginView.routeName);
+                        },
+                        child: const Text(
+                          'di sini',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        )),
+                  ],
+                )
               ],
             ),
           ),

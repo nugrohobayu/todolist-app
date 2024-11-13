@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:todolist/application/components/button/ibutton.dart';
-import 'package:todolist/application/components/dialog/idialog_view.dart';
 import 'package:todolist/application/components/image/iimage.dart';
 import 'package:todolist/application/components/text_form/itext_form.dart';
 import 'package:todolist/application/constant/color_palette.dart';
@@ -9,7 +10,8 @@ import 'package:todolist/application/constant/iconstant.dart';
 import 'package:todolist/application/helper/size_config.dart';
 import 'package:todolist/features/auth/login/models/request_login.dart';
 import 'package:todolist/features/auth/login/viewmodel/login_viewmodel.dart';
-import 'package:provider/provider.dart';
+import 'package:todolist/features/auth/register/views/registration_view.dart';
+import 'package:todolist/features/home/views/checklist_view.dart';
 
 class LoginView extends StatelessWidget {
   static const routeName = '/LoginView';
@@ -23,7 +25,7 @@ class LoginView extends StatelessWidget {
         return AlertDialog(
           elevation: 0,
           backgroundColor: Colors.white,
-          title: const Text('Tutup VMS Mobile'),
+          title: const Text('Tutup Aplikasi'),
           content: const Text('Apakah Anda yakin ingin keluar dari aplikasi?'),
           actions: [
             TextButton(
@@ -110,11 +112,7 @@ class LoginView extends StatelessWidget {
                           RequestLogin payload = RequestLogin(username: ctrlUsername.text, password: ctrlPassword.text);
                           provider.login(context, payload).then((value) {
                             if (value != null) {
-                              IDialogView.dialogSuccess(
-                                context,
-                                title: value.username,
-                                desc: 'Success Login',
-                              );
+                              context.pushReplacement(CheckListView.routeName);
                               ctrlUsername.dispose();
                               ctrlPassword.dispose();
                             }
@@ -123,6 +121,23 @@ class LoginView extends StatelessWidget {
                       },
                     );
                   }),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('belum punya akun? registrasi '),
+                      GestureDetector(
+                          onTap: () {
+                            context.push(RegistrationView.routeName);
+                          },
+                          child: const Text(
+                            'di sini',
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          )),
+                    ],
+                  )
                 ],
               ),
             ),

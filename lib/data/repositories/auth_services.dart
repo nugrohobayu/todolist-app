@@ -18,7 +18,8 @@ class AuthServices extends BaseApi {
       token: false,
     );
     if (res != null) {
-      ResponseLogin result = ResponseLogin.fromJson(res);
+      var resJson = res['data'];
+      ResponseLogin result = ResponseLogin.fromJson(resJson);
       return result;
     }
     return null;
