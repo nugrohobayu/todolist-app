@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:provider/provider.dart';
 import 'package:todolist/application/constant/color_palette.dart';
 import 'package:todolist/application/helper/size_config.dart';
+import 'package:todolist/features/home/viewmodels/checklist_viewmodel.dart';
 import 'package:todolist/routes/route_list.dart';
 import 'package:todolist/routes/route_observer.dart';
 
@@ -32,25 +34,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig.initOnStartUp(context);
 
-    return MaterialApp.router(
-      title: 'Todo List App',
-      debugShowCheckedModeBanner: false,
-      routerConfig: _router,
-      theme: ThemeData(
-        useMaterial3: true,
-        appBarTheme: AppBarTheme(
-            centerTitle: true,
-            elevation: 0,
-            backgroundColor: Colors.white,
-            foregroundColor: Colors.white,
-            iconTheme: const IconThemeData(
-              color: Colors.black,
-            ),
-            titleTextStyle: TextStyle(
-              fontSize: SizeConfig.baseFontSize * 5.5,
-              fontWeight: FontWeight.w500,
-              color: ColorPalette.black,
-            )),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => CheckListViewModel(),
+        ),
+      ],
+      child: MaterialApp.router(
+        title: 'Todo List App',
+        debugShowCheckedModeBanner: false,
+        routerConfig: _router,
+        theme: ThemeData(
+          useMaterial3: true,
+          appBarTheme: AppBarTheme(
+              centerTitle: true,
+              elevation: 0,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.white,
+              iconTheme: const IconThemeData(
+                color: Colors.black,
+              ),
+              titleTextStyle: TextStyle(
+                fontSize: SizeConfig.baseFontSize * 5.5,
+                fontWeight: FontWeight.w500,
+                color: ColorPalette.black,
+              )),
+        ),
       ),
     );
   }
